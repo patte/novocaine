@@ -46,6 +46,8 @@
 @property (nonatomic, assign) SInt64 currentFileTime;
 @property (nonatomic, assign) dispatch_source_t callbackTimer;
 
+@property (readwrite) BOOL stopped;
+
 @end
 
 
@@ -210,11 +212,13 @@ static pthread_mutex_t outputAudioFileLock;
 
 - (void)stop
 {
+    if (self.stopped) return; // only allow stopping once
     // Close the
     pthread_mutex_lock( &outputAudioFileLock );
     ExtAudioFileDispose(self.outputFile);
     pthread_mutex_unlock( &outputAudioFileLock );
     self.recording = FALSE;
+    self.stopped = YES;
 }
 
 - (void)pause

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1CA2BE186DF13C0025613E /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CA2BD186DF13C0025613E /* AudioFileWriter.m */; };
 		FA55267E152A63B6003D9601 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55265D152A63AE003D9601 /* Cocoa.framework */; };
 		FA552684152A63B6003D9601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA552682152A63B6003D9601 /* InfoPlist.strings */; };
 		FA552686152A63B6003D9601 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA552685152A63B6003D9601 /* main.m */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A1CA2BC186DF13C0025613E /* AudioFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileWriter.h; sourceTree = "<group>"; };
+		8A1CA2BD186DF13C0025613E /* AudioFileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileWriter.m; sourceTree = "<group>"; };
 		FA552637152A63A4003D9601 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA552639152A63A4003D9601 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA55263B152A63A4003D9601 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,6 +194,8 @@
 				FA552696152A63F6003D9601 /* Novocaine.mm */,
 				FA552697152A63F6003D9601 /* RingBuffer.h */,
 				FA552698152A63F6003D9601 /* RingBuffer.mm */,
+				8A1CA2BC186DF13C0025613E /* AudioFileWriter.h */,
+				8A1CA2BD186DF13C0025613E /* AudioFileWriter.m */,
 			);
 			path = Novocaine;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 			files = (
 				FA552686152A63B6003D9601 /* main.m in Sources */,
 				FA55268D152A63B6003D9601 /* AppDelegate.mm in Sources */,
+				8A1CA2BE186DF13C0025613E /* AudioFileWriter.m in Sources */,
 				FA55269A152A63F6003D9601 /* Novocaine.mm in Sources */,
 				FA55269C152A63F6003D9601 /* RingBuffer.mm in Sources */,
 			);

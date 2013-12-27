@@ -43,6 +43,11 @@
     // Release any retained subviews of the main view.
 }
 
+-(IBAction)stop:(id)sender {
+    audioManager.inputBlock = nil;
+    [_fileWriter stop];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

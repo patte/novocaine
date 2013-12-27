@@ -42,4 +42,6 @@
 @property (nonatomic, retain) Novocaine *audioManager;
 @property (nonatomic, retain) AudioFileWriter *fileWriter;
 
+-(IBAction)stop:(id)sender;
+
 @end

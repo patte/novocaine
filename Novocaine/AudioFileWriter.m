@@ -133,8 +133,44 @@ static pthread_mutex_t outputAudioFileLock;
     return self;
 }
 
+static double __lastMeassurementTime = 0;
+static double __lastCallTime = 0;
+static double __avgRecallTime = 0;
+static double __avgNumFrames = 0;
+
 - (void)writeNewAudio:(float *)newData numFrames:(UInt32)thisNumFrames numChannels:(UInt32)thisNumChannels
 {
+    double now = CFAbsoluteTimeGetCurrent();
+
+    if(__lastMeassurementTime == 0) {
+        __lastMeassurementTime = now;
+        __lastCallTime = now;
+    }
+    else {
+        double excTime = now-__lastCallTime;
+        if(__avgRecallTime==0) {
+            __avgRecallTime = excTime;
+            __avgNumFrames = thisNumFrames;
+        }
+        else {
+            __avgRecallTime = __avgRecallTime+(excTime/2.0);
+            __avgNumFrames = __avgNumFrames+(thisNumFrames/2.0);
+        }
+    }
+    
+    int dt = 5*1000;
+
+    if(__lastMeassurementTime<now+dt) {
+        NSLog(@"AudioFileWriter writeNewAudio avg calls per second:%.4f  avgNumFrames:%.4f this are %.4f seconds", 1.0/__avgRecallTime, __avgNumFrames, 1.0/self.samplingRate*__avgNumFrames);
+        __avgRecallTime = 0;
+        __avgNumFrames = 0;
+        __lastMeassurementTime = now;
+    }
+        
+    __lastCallTime = now;
+
+    
+    
     UInt32 numIncomingBytes = thisNumFrames*thisNumChannels*sizeof(float);
     memcpy(self.outputBuffer, newData, numIncomingBytes);
     

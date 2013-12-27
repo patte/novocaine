@@ -16,10 +16,6 @@
 		FA552690152A63B6003D9601 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA55268E152A63B6003D9601 /* MainMenu.xib */; };
 		FA55269A152A63F6003D9601 /* Novocaine.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA552696152A63F6003D9601 /* Novocaine.mm */; };
 		FA55269C152A63F6003D9601 /* RingBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA552698152A63F6003D9601 /* RingBuffer.mm */; };
-		FA5526A5152A640E003D9601 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55269D152A6405003D9601 /* Accelerate.framework */; };
-		FA5526A6152A640E003D9601 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55269E152A6405003D9601 /* AudioToolbox.framework */; };
-		FA5526A7152A640E003D9601 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55269F152A6405003D9601 /* AudioUnit.framework */; };
-		FA5526A8152A640E003D9601 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5526A0152A6405003D9601 /* CoreAudio.framework */; };
 		FA5526D0152A6452003D9601 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA552637152A63A4003D9601 /* UIKit.framework */; };
 		FA5526D1152A6452003D9601 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA552639152A63A4003D9601 /* Foundation.framework */; };
 		FA5526D2152A6452003D9601 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55263B152A63A4003D9601 /* CoreGraphics.framework */; };
@@ -62,10 +58,6 @@
 		FA552696152A63F6003D9601 /* Novocaine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Novocaine.mm; sourceTree = "<group>"; };
 		FA552697152A63F6003D9601 /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
 		FA552698152A63F6003D9601 /* RingBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RingBuffer.mm; sourceTree = "<group>"; };
-		FA55269D152A6405003D9601 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
-		FA55269E152A6405003D9601 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		FA55269F152A6405003D9601 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = DEVELOPER_DIR; };
-		FA5526A0152A6405003D9601 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
 		FA5526CE152A6451003D9601 /* Novocaine iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Novocaine iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5526D5152A6452003D9601 /* Novocaine iOS Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Novocaine iOS Example-Info.plist"; sourceTree = "<group>"; };
 		FA5526D7152A6452003D9601 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -90,10 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5526A5152A640E003D9601 /* Accelerate.framework in Frameworks */,
-				FA5526A6152A640E003D9601 /* AudioToolbox.framework in Frameworks */,
-				FA5526A7152A640E003D9601 /* AudioUnit.framework in Frameworks */,
-				FA5526A8152A640E003D9601 /* CoreAudio.framework in Frameworks */,
 				FA55267E152A63B6003D9601 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,10 +109,6 @@
 				FA5526EC152A6466003D9601 /* AudioToolbox.framework */,
 				FA5526ED152A6466003D9601 /* AudioUnit.framework */,
 				FA5526EE152A6466003D9601 /* CoreAudio.framework */,
-				FA55269D152A6405003D9601 /* Accelerate.framework */,
-				FA55269E152A6405003D9601 /* AudioToolbox.framework */,
-				FA55269F152A6405003D9601 /* AudioUnit.framework */,
-				FA5526A0152A6405003D9601 /* CoreAudio.framework */,
 				FA552694152A63F6003D9601 /* Novocaine */,
 				FA55267F152A63B6003D9601 /* Novocaine Mac Example */,
 				FA5526D3152A6452003D9601 /* Novocaine iOS Example */,

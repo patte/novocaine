@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A1CA2BE186DF13C0025613E /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CA2BD186DF13C0025613E /* AudioFileWriter.m */; };
+		8A1CA2BF186DF3190025613E /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CA2BD186DF13C0025613E /* AudioFileWriter.m */; };
 		FA55267E152A63B6003D9601 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55265D152A63AE003D9601 /* Cocoa.framework */; };
 		FA552684152A63B6003D9601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA552682152A63B6003D9601 /* InfoPlist.strings */; };
 		FA552686152A63B6003D9601 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA552685152A63B6003D9601 /* main.m */; };
@@ -317,6 +318,7 @@
 			files = (
 				FA9FB52A152A6505004B7AA8 /* Novocaine.h in Sources */,
 				FA9FB52B152A6505004B7AA8 /* Novocaine.mm in Sources */,
+				8A1CA2BF186DF3190025613E /* AudioFileWriter.m in Sources */,
 				FA9FB52C152A6505004B7AA8 /* RingBuffer.h in Sources */,
 				FA9FB52D152A6505004B7AA8 /* RingBuffer.mm in Sources */,
 				FA5526DA152A6452003D9601 /* main.m in Sources */,

@@ -29,7 +29,7 @@
 @end
 
 @implementation ViewController
-@synthesize theSlider, splView;
+@synthesize theSlider, splView, audioManager, fileWriter;
 
 - (void)viewDidLoad
 {
@@ -180,6 +180,33 @@
 //         }
 //     }];
 
+    // AUDIO FILE WRITING YEAH!
+    // ========================================
+    NSArray *pathComponents = [NSArray arrayWithObjects:
+                               [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+                               @"My Recording.m4a",
+                               nil];
+    NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
+    NSLog(@"URL: %@", outputFileURL);
+
+    _fileWriter = [[AudioFileWriter alloc]
+                       initWithAudioFileURL:outputFileURL
+                       samplingRate:audioManager.samplingRate
+                       numChannels:audioManager.numInputChannels];
+
+
+    //__block int counter = 0;
+    //__block ViewController *wself = self;
+    audioManager.inputBlock = ^(float *data, UInt32 numFrames, UInt32 numChannels) {
+        float volume = 2.5;
+        vDSP_vsmul(data, 1, &volume, data, 1, numFrames*numChannels);
+        
+        [_fileWriter writeNewAudio:data numFrames:numFrames numChannels:numChannels];
+        /*counter += 1;
+        if (counter > 800) { // roughly 10 seconds of audio
+            wself.audioManager.inputBlock = nil;
+        }*/
+    };
 
     
 }

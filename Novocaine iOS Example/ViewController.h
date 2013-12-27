@@ -26,13 +26,20 @@
 #import "Novocaine.h"
 #import "RingBuffer.h"
 #import "SPL.h"
+#import "AudioFileWriter.h"
 
 @interface ViewController : UIViewController
 {
     RingBuffer *ringBuffer;
     Novocaine *audioManager;
+    
+    AudioFileWriter *_fileWriter;
 }
 
 @property (nonatomic, retain) IBOutlet UISlider *theSlider;
 @property (nonatomic, retain) IBOutlet SPL *splView;
+
+@property (nonatomic, retain) Novocaine *audioManager;
+@property (nonatomic, retain) AudioFileWriter *fileWriter;
+
 @end
